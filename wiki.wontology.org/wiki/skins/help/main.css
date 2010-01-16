@@ -1,0 +1,11 @@
+
+/* no edit links in help pages */
+.editsection { display: none; }
+#ca-edit { display: none; }
+#ca-viewsource { display: none; }
+
+#content {
+  margin: 2.8em;
+  border-right: 1px solid #aaa;  /* copied from monobook/main, easiest way
+                                    to re-enable right-hand border */
+}
