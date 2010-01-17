@@ -1,9 +1,9 @@
 <?php
 
 if( defined( 'MW_INSTALL_PATH' ) ) {
-    $IP = MW_INSTALL_PATH;
+  $IP = MW_INSTALL_PATH;
 } else {
-    $IP = dirname( __FILE__ );
+  $IP = dirname( __FILE__ );
 }
 
 $path = array( $IP, "$IP/includes", "$IP/languages" );
@@ -13,9 +13,9 @@ require_once( "$IP/includes/DefaultSettings.php" );
 $wgCacheEpoch = max( $wgCacheEpoch, gmdate( 'YmdHis', @filemtime( __FILE__ ) ) );
 
 if ( $wgCommandLineMode ) {
-    if ( isset( $_SERVER ) && array_key_exists( 'REQUEST_METHOD', $_SERVER ) ) {
-        die( "This script must be run from the command line\n" );
-    }
+  if ( isset( $_SERVER ) && array_key_exists( 'REQUEST_METHOD', $_SERVER ) ) {
+    die( "This script must be run from the command line\n" );
+  }
 }
 
 $wgSitename         = "Wontology";
@@ -91,3 +91,6 @@ require_once( "$IP/extensions/PageCSS/PageCSS.php" );
 
 $wgUsePathInfo = true;
 require_once( "$IP/extensions/skin-by-url-2.php" );
+$wg_AMZWID_associateId = "wontology-20";
+$wg_AMZWID_margin = "1em";
+require_once( "$IP/extensions/AmazonWidget/AmazonWidget.php" );
