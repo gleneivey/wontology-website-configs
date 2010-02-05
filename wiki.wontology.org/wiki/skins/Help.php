@@ -112,16 +112,6 @@ class HelpTemplate extends MonoBookTemplate {
       <div class="visualClear"></div>
     </div><!-- globalWrapper -->
     <div id="footer">
-<!--
-<?php
-    print $_ENV['PATH'] . "\n";
-    print $_ENV['PWD'] . "\n";
-    print $_ENV['LANG'] . "\n";
-    print $_ENV['PIDFILE'] . "\n";
-    print $_ENV['MW_INSTALL_PATH'] . "\n";
-    print $_ENV['SHELL'] . "\n";
-?>
--->
       <ul id="f-list">
         <li id="help-skin-link"><a href="<?php 
           $pageUrl = $this->data['nav_urls']['permalink']['href'];
@@ -130,18 +120,12 @@ class HelpTemplate extends MonoBookTemplate {
           $pageUrl = preg_replace(
             "/\/help\.php\?/",        "/index.php?",     $pageUrl );
           print htmlspecialchars( $pageUrl );
-        ?>">View this page in our wiki for more options.</li>
+        ?>">View this page in our wiki for more options.</a></li>
         <li id="copyright"><?php $this->html('copyright') ?></li>
       </ul>
     </div>
 <?php $this->html('bottomscripts'); /* JS call to runBodyOnloadHook */ ?>
 <?php $this->html('reporttime') ?>
-<?php if ( $this->data['debug'] ): ?>
-<!-- Debug output:
-<?php $this->text( 'debug' ); ?>
-
--->
-<?php endif; ?>
   </body>
 </html>
 <?php
