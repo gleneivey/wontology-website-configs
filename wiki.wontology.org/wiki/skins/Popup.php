@@ -88,12 +88,11 @@ class PopupTemplate extends MonoBookTemplate {
         <div id="content">
           <a name="top" id="top"></a>
           <div id="bodyContent">
-            <div id="contentSub"><?php $this->html('subtitle') ?></div>
 
-              <!-- start content -->
-              <?php $this->html('bodytext') ?>
-              <?php if($this->data['catlinks']) { $this->html('catlinks'); } ?>
-              <!-- end content -->
+	    <!-- start content -->
+	    <?php $this->html('bodytext') ?>
+	    <?php if($this->data['catlinks']) { $this->html('catlinks'); } ?>
+	    <!-- end content -->
 
             <div class="visualClear"></div>
           </div><!-- bodyContent -->
@@ -103,12 +102,12 @@ class PopupTemplate extends MonoBookTemplate {
     </div><!-- globalWrapper -->
 
     <div style="text-align: center;">
-      <a href="<?php 
+      <a target="_blank" href="<?php
 	$pageUrl = $this->data['nav_urls']['permalink']['href'];
 	$pageUrl = preg_replace(
 	  "/[?&]oldid=[0-9]+/",     "",                $pageUrl );
 	$pageUrl = preg_replace(
-	  "/\/help\.php\?/",        "/index.php?",     $pageUrl );
+	  "/\/popup\.php\?/",       "/index.php?",     $pageUrl );
 	print htmlspecialchars( $pageUrl );
       ?>">View this page in our wiki for more options.</a>
     </div>
