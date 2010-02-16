@@ -17,12 +17,12 @@
 
 
 module WontologyHelper
-  def link_to_node_by_name(name)
+  def link_to_node_by_name(name, text=nil)
     unless defined? @nodes_by_name
       init_name_to_node_hash
     end
     n = @nodes_by_name[name]
-    return link_to n.title, node_path(n)
+    return link_to( (text ? text : h(n.title)), node_path(n) )
   end
 
   def init_name_to_node_hash
