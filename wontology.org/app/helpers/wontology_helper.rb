@@ -17,18 +17,22 @@
 
 
 module WontologyHelper
-  def link_to_node_by_name(name, text=nil)
-    unless defined? @nodes_by_name
-      init_name_to_node_hash
+  def link_to_item_by_name(name, text=nil)
+    unless defined? @items_by_name
+      init_name_to_item_hash
     end
-    n = @nodes_by_name[name]
-    return link_to( (text ? text : h(n.title)), node_path(n) )
+    n = @items_by_name[name]
+    if n
+      return link_to( (text ? text : h(n.title)), item_path(n) )
+    else
+      return '<i>[missing]</i>'
+    end
   end
 
-  def init_name_to_node_hash
-    @nodes_by_name = {}
-    @nouns.each do |node|
-      @nodes_by_name[node.name] = node
+  def init_name_to_item_hash
+    @items_by_name = {}
+    @nouns.each do |item|
+      @items_by_name[item.name] = item
     end
   end
 end

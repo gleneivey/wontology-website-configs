@@ -76,8 +76,8 @@ $wgRightsIcon = "${wgScriptPath}/skins/common/images/gnu-fdl.png";
 
 
 
-$wgExtraNamespaces[100] = "WmHelp";
-$wgExtraNamespaces[101] = "WmHelp_talk";
+$wgExtraNamespaces[100] = "Help";
+$wgExtraNamespaces[101] = "Help_talk";
 $wgNamespacesWithSubpages[100] = true;
 $wgNamespacesToBeSearchedDefault[100] = true;
 $wgContentNamespaces =  array( 100 );
