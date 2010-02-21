@@ -1,5 +1,4 @@
 User-agent: *
 Disallow: /wiki/
 Disallow: /Special:
-Disallow: /Help:
-
+Disallow: /WikiHelp:
