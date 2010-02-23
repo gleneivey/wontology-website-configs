@@ -30,6 +30,10 @@
     font-size: 140%;
     width: 78%;
     margin-left: 11%;
+    color: yellow;
+  }
+  #intro-text-container li span {
+    color: black;
   }
 </style>
 <div id="intro-text-container">
@@ -38,11 +42,11 @@ A wontology is a <u>w</u>iki-<u>ontology</u>: a publicly editable
 store of information in lists, trees, hierarchies, and relationships.
 To get started:
   </p><ul>
-    <li>read <a href="<%= WontoMedia.help_url_prefix -%>Help:Information_as_Relationships">Information as Relationships</a>,</li>
-    <li>do our <a href="<%= WontoMedia.help_url_prefix -%>Help:Tutorials/Creating_an_Item">first tutorial</a>, or</li>
-    <li>go to our sample wontology, <%=
+    <li><span>read <a href="<%= WontoMedia.help_url_prefix -%>Help:Information_as_Relationships">Information as Relationships</a>,</span></li>
+    <li><span>do our <a href="<%= WontoMedia.help_url_prefix -%>Help:Tutorials/Creating_an_Item">first tutorial</a>, or</span></li>
+    <li><span>go to our sample wontology, <%=
       link_to_item_by_name 'ProgrammingLanguages', 'Programming Language' -%>
-      categories.</li>
+      categories.</span></li>
   </ul><p>
 <em>You are welcome to experiment with this system and its data</em>, to
 add new information, and to expand or edit what is already present.

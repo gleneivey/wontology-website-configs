@@ -28,8 +28,8 @@ ReWriteCond %{REQUEST_FILENAME} _packaged
 ReWriteCond %{REQUEST_FILENAME}.gz -f
 # then exclude specific cases where we don't want to gzip encode
 ReWriteCond %{HTTP_USER_AGENT} !Safari
-ReWriteCond %{HTTP_USER_AGENT} MSIE [OR]
-ReWriteCond %{HTTP_USER_AGENT} !Mozilla/4
+ReWriteCond %{HTTP_USER_AGENT} !Mozilla/4 [OR]
+ReWriteCond %{HTTP_USER_AGENT} MSIE
 ReWriteCond %{REQUEST_FILENAME} !^.+\.gz$
 ReWriteRule ^(.*)$ $1.gz [L]
 <Files ~ "\.css\.gz$">
