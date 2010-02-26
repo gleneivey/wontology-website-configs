@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <title>WontoMedia at RubyForge</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body>
+    <blockquote><p>
+
+<b><i>WontoMedia</i></b> &mdash; WontoMedia is a web application
+package for hosting a Wontology (a
+
+<a href="http://en.wikipedia.org/wiki/Wiki">Wiki</a>-<a href="http://en.wikipedia.org/wiki/Ontology_(information_science)">Ontology</a>):
+
+a classification
+scheme created and maintained by a community. From categories in a
+bug-tracker or RubyForge's own Trove, to a document repository's
+controlled vocabulary, a species taxonomy, or thesaurus.
+("<em>wontology</em>" comes from <u>w</u>iki plus
+<u>ontology</u>. "<em>WontoMedia</em>" is a <u>wonto</u>logy web app
+in the same way that <u>Media</u>Wiki is a wiki web app.)
+
+    </p><ul>
+      <li>
+
+A live example of a WontoMedia deployment is at
+<a href="http://wontology.org/">http://wontology.org</a>.
+
+      </li><li>
+
+The project wiki is at
+<a href="http://wiki.wontology.org/Main_Page">http://wiki.wontology.org</a>,
+including <a href="http://wiki.wontology.org/Install_from_Scratch">install</a>
+<a href="http://wiki.wontology.org/Setting_Up_Your_Development_Environment">instructions</a>.
+
+      </li><li>
+
+Stable sources for WontoMedia are hosted on
+<a href="http://rubyforge.org/projects/wontomedia/">RubyForge</a>
+in a Git repository.
+
+      </li><li>
+
+The latest sources are
+<a href="http://github.com/gleneivey/wontomedia">on GitHub</a>
+
+      </li>
+    </ul><p>
+
+WontoMedia is a free/<a href="http://en.wikipedia.org/wiki/Libre_software#Naming">libre</a>/open-source software 
+(<a href="http://en.wikipedia.org/wiki/FLOSS">FLOSS</a>
+<a href="http://www.fsf.org/licensing/licenses/agpl-3.0.html">AGPLv3</a>)
+<a href="http://rubyonrails.org/">Ruby-on-Rails</a> web application,
+written in the language
+<a href="http://ruby-lang.org/">Ruby</a>.
+It is being developed using FLOSS tools for TDD
+(<a href="http://en.wikipedia.org/wiki/Test_driven_development">Test-Driven
+      Development</a>) and 
+<a href="http://testdrivendeveloper.com/2008/04/02/AcceptanceTestDrivenDevelopmentExplained.aspx">ATDD</a>
+(<a href="http://testobsessed.com/wordpress/wp-content/uploads/2008/12/atddexample.pdf">Acceptance-Test Driven Development</a>),
+and supporting distribution/installation via 
+<a href="http://www.kernel.org/pub/software/scm/git/docs/">Git</a>,
+<a href="http://www.rubygems.org/">rubygems</a>, and
+<a href="http://pkg-ruby-extras.alioth.debian.org/upstream-devs.html">tar/setup.rb</a> (planned).
+
+    </p><p>
+
+It is intended for websites that are, or that use, wontologies.  That
+is, websites which are (in whole or in part) community-produced
+ontologies, or simpler structures like lists, hierarchies, taxonomies,
+thesauri, controlled vocabularies, etc.  This is analogous to how a
+wiki is used for community production of prose or to how freebase.com
+is a "community database" site.
+
+    </p></blockquote>
+    <h3>Welcome Developers</h3>
+    <p>
+
+Some development documentation is in place
+<a href="http://wiki.wontology.org/">on the project wiki</a> If you're
+interested in the project or have any questions, please post to the
+<a href="http://rubyforge.org/forum/?group_id=7903">forum</a> here or the
+<a href="http://rubyforge.org/mail/?group_id=7903">general discussion
+email list</a> (send to the list at <u><code>wontomedia-development at
+rubyforge dot org</code></u>).
+
+    </p><p>
+
+I'm developing WontoMedia in an agile style:  using TDD and ATDD
+(using with <code><a href="http://cukes.info/">Cucumber</a></code>
+as an ATDD framework), organizing development into
+
+<a href="http://www.agileadvice.com/archives/2006/08/seventeen_tips.html">iterations</a> of
+<a href="http://www.mountaingoatsoftware.com/article_view/27">stories</a>,
+using continuous integration (currently manually, eventually with
+something like
+<code><a href="http://cruisecontrolrb.thoughtworks.com/">CruiseControl.rb</a></code>),
+etc.  Our defined stories, including backlog, are hosted on
+<a href="http://www.pivotaltracker.com/projects/9280">Pivotal Tracker</a>.
+Source will be pushed to the Git repository here on RubyForge
+each time a story is complete, with more frequent updates being made
+to the satellite repository on GitHub.  We are currently using
+one-week iterations and have the expectation of making a several-story
+minor release every few weeks.
+
+    </p><p>
+
+I would like to adopt
+<a href="http://agilesoftwaredevelopment.com/xp/practices/">XP</a>
+and/or
+<a href="http://en.wikipedia.org/wiki/Scrum_(development)">Scrum</a>,
+
+but key practices like Sit Together, Pair Programming, and having
+(synchronous) Daily Scrums are logistically difficult in a typical
+volunteer open-source development.  If you are interested in
+experimenting with the application of agile practices to distributed,
+part-time teams, please consider joining.
+
+    </p><p>
+
+The project's developer resources are distributed as follows:
+
+    </p>
+    <ul><li>
+
+Primary (stable release) Git repository on
+<a href="http://rubyforge.org/projects/wontomedia/">RubyForge</a>:
+<code>git://rubyforge.org/wontomedia.git</code> (or
+<a href="http://wontomedia.rubyforge.org/git?p=wontomedia.git;a=tree">view
+in a browser</a>).  The current release version of WontoMedia is in
+the branch "<tt>master</tt>", with the sources for user stories
+that have been completed since the last release in the branch
+"<tt>development</tt>".
+
+    </li><li>
+
+Working Git repository on
+<a href="https://github.com/gleneivey/wontomedia/tree">GitHub</a>:
+<code>git://github.com/gleneivey/wontomedia.git</code>, where
+the branch "<tt>master</tt>" is used for integration and testing of
+completed stories before they are deployed to our public testing site
+or merged into the <tt>development</tt> branch in the RubyForge
+repository.  Each user story currently being implemented is stored in
+its own GitHub branch.
+
+    </li><li>
+
+Ready-to-implement user story tracking on Pivotal Tracker:
+<code><a href="https://www.pivotaltracker.com/projects/9280/stories">https://www.pivotaltracker.com/projects/9280</a></code>
+
+    </li><li>
+
+Project documentation in our wiki:
+<code><a href="http://wiki.wontology.org/Main_Page">http://wiki.wontology.org/</a></code>
+
+    </li><li>
+
+Project discussion forum on RubyForge:
+<code><a href="http://rubyforge.org/forum/?group_id=7903">http://rubyforge.org/forum/?group_id=7903</a></code>
+
+    </li><li>
+
+Project email lists on RubyForge:
+<code><a href="http://rubyforge.org/mail/?group_id=7903">http://rubyforge.org/mail/?group_id=7903</a></code>
+
+    </li><li>
+
+Project bug/etc. tracking on RubyForge:
+<code><a href="http://rubyforge.org/tracker/?group_id=7903">http://rubyforge.org/tracker/?group_id=7903</a></code>
+
+    </li></ul>
+    <p>
+
+(If you have any problems with any of these resources, please write to
+<code>development at wontology dot org</code>.)
+
+    </p>
+    <p style="text-align: right"><i>&mdash; glen</i></p>
+
+    <p style="text-align: center; font-size: 50%; color: grey; padding-top: 5em;">
+Copyright &copy; 2010
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/us/">
+<img alt="Creative Commons License" style="border-width:0"
+      src="cc-by-nd-80x15.png" /></a>
+<span xmlns:dc="http://purl.org/dc/elements/1.1/"
+      href="http://purl.org/dc/dcmitype/Text" property="dc:title"
+      rel="dc:type">WontoMedia RubyForge web pages</span> by
+<a xmlns:cc="http://creativecommons.org/ns#" href="http://github.com/gleneivey"
+      property="cc:attributionName" rel="cc:attributionURL">Glen E. Ivey</a>
+
+    </p>
+  </body>
+</html>

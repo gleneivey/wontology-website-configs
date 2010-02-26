@@ -1,0 +1,14 @@
+
+body {
+  margin: 0;
+  padding-left: 2cm;
+  padding-right: 2cm;
+  padding-bottom: 0.5cm;
+  border-top-style: solid;
+  border-top-width: 3cm;
+  border-top-color: maroon;
+}
+
+li {
+  padding-bottom: 4pt;
+}
