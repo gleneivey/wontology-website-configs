@@ -89,7 +89,43 @@ class HelpTemplate extends MonoBookTemplate {
           <a name="top" id="top"></a>
           <?php if($this->data['sitenotice']) { ?><div id="siteNotice"><?php $this->html('sitenotice') ?></div><?php } ?>
 
+          <div id="upper-right-ad"
+style="float: right; font-size: 188%; padding-top: 0.5em; display: none;">
+            <script type="text/javascript"><!--
+              google_ad_client = "pub-2447626445162341";
+              google_ad_slot = "5421337203";
+              google_ad_width = 300;
+              google_ad_height = 250;
+              //-->
+            </script>
+            <script type="text/javascript"
+              src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+          </div>
           <h1 id="firstHeading" class="firstHeading"><?php $this->data['displaytitle']!=""?$this->html('title'):$this->text('title') ?></h1>
+
+          <div id="left-ad-column"
+style="float: left; padding-right: 1em; padding-top: 2em; display: none;">
+            <script type="text/javascript"><!--
+              amazon_ad_tag = "wontology-20";
+              amazon_ad_border = "hide";
+              amazon_ad_width = "160";
+              amazon_ad_height = "600";
+              //--></script>
+            <script type="text/javascript" src="http://www.assoc-amazon.com/s/ads.js"></script>
+            <br />
+            <script type="text/javascript"><!--
+              google_ad_client = "pub-2447626445162341";
+              google_ad_slot = "8032286693";
+              google_ad_width = 160;
+              google_ad_height = 600;
+              //-->
+            </script>
+            <script type="text/javascript"
+              src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+          </div>
+
           <div id="bodyContent">
             <h3 id="siteSub"><?php $this->msg('tagline') ?></h3>
             <div id="contentSub"><?php $this->html('subtitle') ?></div>
@@ -106,6 +142,59 @@ class HelpTemplate extends MonoBookTemplate {
             <?php if($this->data['dataAfterContent']) { $this->html ('dataAfterContent'); } ?>
 
             <div class="visualClear"></div>
+
+            <div id="bottom-ads-popup" align="center" style="display: none;">
+              <script type="text/javascript"><!--
+                google_ad_client = "pub-2447626445162341";
+                google_ad_slot = "9833245648";
+                google_ad_width = 728;
+                google_ad_height = 15;
+                //-->
+              </script>
+              <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+              </script>
+
+              <script type="text/javascript"><!--
+                amazon_ad_tag = "wontology-20";
+                amazon_ad_width = "728";
+                amazon_ad_height = "90";
+                amazon_ad_logo = "hide";
+                amazon_ad_link_target = "new";
+                amazon_color_border = "B0B0FF";
+                amazon_color_link = "1D43C0";
+                amazon_color_logo = "040460";
+              //--></script>
+              <script type="text/javascript" src="http://www.assoc-amazon.com/s/ads.js"></script>
+            </div>
+            <div id="bottom-ads-fullpage" align="center" style="display: none;">
+              <script type="text/javascript"><!--
+                google_ad_client = "pub-2447626445162341";
+                google_ad_slot = "6724122983";
+                google_ad_width = 468;
+                google_ad_height = 60;
+                //-->
+              </script>
+              <script type="text/javascript"
+                src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+              </script>
+            </div>
+
+            <script type="text/javascript"><!--
+              function showDiv(divId){
+                document.getElementById(divId).style.display = 'block';
+              }
+              if (window == window.top){ // being displayed full-page
+                if ((typeof wikiPageHasAds === 'undefined') || !wikiPageHasAds)
+                  showDiv('upper-right-ad');
+                showDiv('left-ad-column');
+                showDiv('bottom-ads-fullpage');
+              }
+              else {
+                showDiv('bottom-ads-popup');
+              }
+              //-->
+            </script>
           </div><!-- bodyContent -->
         </div><!-- content -->
       </div><!-- column-content -->
@@ -113,7 +202,7 @@ class HelpTemplate extends MonoBookTemplate {
     </div><!-- globalWrapper -->
     <div id="footer">
       <ul id="f-list">
-        <li id="help-skin-link"><a href="<?php 
+        <li id="help-skin-link"><a id="help-skin-link-anchor" href="<?php
           $pageUrl = $this->data['nav_urls']['permalink']['href'];
           $pageUrl = preg_replace(
             "/[?&]oldid=[0-9]+/",     "",                $pageUrl );
@@ -121,6 +210,11 @@ class HelpTemplate extends MonoBookTemplate {
             "/\/help\.php\?/",        "/index.php?",     $pageUrl );
           print htmlspecialchars( $pageUrl );
         ?>">View this page in our wiki for more options.</a></li>
+        <script type="text/javascript"><!--
+          if (window != window.top)  // displayed in an iframe
+            document.getElementById('help-skin-link-anchor').target = '_blank';
+          //-->
+        </script>
         <li id="copyright"><?php $this->html('copyright') ?></li>
       </ul>
     </div>

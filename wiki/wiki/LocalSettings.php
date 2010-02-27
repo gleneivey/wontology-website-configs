@@ -92,5 +92,5 @@ require_once( "$IP/extensions/PageCSS/PageCSS.php" );
 $wgUsePathInfo = true;
 require_once( "$IP/extensions/skin-by-url-2.php" );
 $wg_AMZWID_associateId = "wontology-20";
-$wg_AMZWID_margin = "1em";
+$wg_AMZWID_margin = "2em";
 require_once( "$IP/extensions/AmazonWidget/AmazonWidget.php" );

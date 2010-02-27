@@ -6,6 +6,15 @@
 
 #content {
   margin: 2.8em;
-  border-right: 1px solid #aaa;  /* copied from monobook/main, easiest way
+  border: 1px solid #aaa;  /* copied from monobook/main, easiest way
                                     to re-enable right-hand border */
+}
+#column-content {  /* eliminate monobook hooks for multi-column */
+  float: none;
+  margin: 0;
+}
+
+#content li {  /* keep markers from sliding under anything float'ed left */
+  position: relative;
+  left: 1em;
 }
