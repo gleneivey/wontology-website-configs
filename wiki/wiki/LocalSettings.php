@@ -91,6 +91,11 @@ require_once( "$IP/extensions/PageCSS/PageCSS.php" );
 
 $wgUsePathInfo = true;
 require_once( "$IP/extensions/skin-by-url-2.php" );
+$wg_GOOG_publisherId = "pub-2447626445162341";
+$wg_HelpSkin_GOOG_upperRight = "5421337203";
+$wg_HelpSkin_GOOG_leftColumn = "8032286693";
+$wg_HelpSkin_GOOG_bottomPopup = "9833245648";
+$wg_HelpSkin_GOOG_bottomFull = "6724122983";
 $wg_AMZWID_associateId = "wontology-20";
 $wg_AMZWID_margin = "2em";
 require_once( "$IP/extensions/AmazonWidget/AmazonWidget.php" );
