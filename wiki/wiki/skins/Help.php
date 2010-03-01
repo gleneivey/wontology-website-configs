@@ -147,30 +147,30 @@ style="float: left; padding-right: 1em; padding-top: 2em; display: none; width: 
     <!-- now load and display all of the page's ads -->
     <script type="text/javascript"><!--
       function showDiv(divId){
-	document.getElementById(divId).style.display = 'block';
+        document.getElementById(divId).style.display = 'block';
       }
       function moveAndShowAd(divId){
-	var targetDiv = document.getElementById( divId );
-	var divWithAd = document.getElementById( divId + '-content' );
+        var targetDiv = document.getElementById( divId );
+        var divWithAd = document.getElementById( divId + '-content' );
 
-	// remove the ad div from the main document
-	var parent = divWithAd.parentNode;
-	parent.removeChild( divWithAd );
-	// put the ad div into its target location on the page
-	targetDiv.appendChild( divWithAd );
-	// and make it visible
-	divWithAd.style.display = 'block';
+        // remove the ad div from the main document
+        var parent = divWithAd.parentNode;
+        parent.removeChild( divWithAd );
+        // put the ad div into its target location on the page
+        targetDiv.appendChild( divWithAd );
+        // and make it visible
+        divWithAd.style.display = 'block';
       }
       function operateOnAdsByContext(doitFunction){
-	if (window == window.top){ // being displayed full-page
-	  if ((typeof wikiPageHasAds === 'undefined') || !wikiPageHasAds)
-	    doitFunction('upper-right-ad');
-	  doitFunction('left-ad-column');
-	  doitFunction('bottom-ads-fullpage');
-	}
-	else {
-	  doitFunction('bottom-ads-popup');
-	}
+        if (window == window.top){ // being displayed full-page
+          if ((typeof wikiPageHasAds === 'undefined') || !wikiPageHasAds)
+            doitFunction('upper-right-ad');
+          doitFunction('left-ad-column');
+          doitFunction('bottom-ads-fullpage');
+        }
+        else {
+          doitFunction('bottom-ads-popup');
+        }
       }
 
       operateOnAdsByContext(showDiv);
@@ -179,94 +179,94 @@ style="float: left; padding-right: 1em; padding-top: 2em; display: none; width: 
 
     <div id="upper-right-ad-content" style="display: none;">
       <script type="text/javascript"><!--
-	google_ad_client = "<?php
+        google_ad_client = "<?php
           global $wg_GOOG_publisherId;
           echo $wg_GOOG_publisherId;                            ?>";
-	google_ad_slot = "<?php
+        google_ad_slot = "<?php
           global $wg_HelpSkin_GOOG_upperRight;
           echo $wg_HelpSkin_GOOG_upperRight;                    ?>";
-	google_ad_width = 300;
-	google_ad_height = 250;
-	//-->
+        google_ad_width = 300;
+        google_ad_height = 250;
+        //-->
       </script>
       <script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       </script>
     </div>
     <div id="left-ad-column-content" style="display: none;">
       <script type="text/javascript"><!--
-	amazon_ad_tag = "<?php
+        amazon_ad_tag = "<?php
           global $wg_AMZWID_associateId;
           echo $wg_AMZWID_associateId;                          ?>";
-	amazon_ad_border = "hide";
-	amazon_ad_width = "160";
-	amazon_ad_height = "600";
-	amazon_color_border = "f9f9f9";
-	amazon_color_link = "1d43c0";
-	amazon_color_logo = "black";
-	//--></script>
+        amazon_ad_border = "hide";
+        amazon_ad_width = "160";
+        amazon_ad_height = "600";
+        amazon_color_border = "f9f9f9";
+        amazon_color_link = "1d43c0";
+        amazon_color_logo = "black";
+        //--></script>
       <script type="text/javascript" src="http://www.assoc-amazon.com/s/ads.js"></script>
       <br />
       <script type="text/javascript"><!--
-	google_ad_client = "<?php
+        google_ad_client = "<?php
           global $wg_GOOG_publisherId;
           echo $wg_GOOG_publisherId;                            ?>";
-	google_ad_slot = "<?php
+        google_ad_slot = "<?php
           global $wg_HelpSkin_GOOG_leftColumn;
           echo $wg_HelpSkin_GOOG_leftColumn;                    ?>";
-	google_ad_width = 160;
-	google_ad_height = 600;
-	//-->
+        google_ad_width = 160;
+        google_ad_height = 600;
+        //-->
       </script>
       <script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       </script>
     </div>
     <div id="bottom-ads-popup-content" style="display: none;">
       <script type="text/javascript"><!--
-	google_ad_client = "<?php
+        google_ad_client = "<?php
           global $wg_GOOG_publisherId;
           echo $wg_GOOG_publisherId;                            ?>";
-	google_ad_slot = "<?php
+        google_ad_slot = "<?php
           global $wg_HelpSkin_GOOG_bottomPopup;
           echo $wg_HelpSkin_GOOG_bottomPopup;                   ?>";
-	google_ad_width = 728;
-	google_ad_height = 15;
-	//-->
+        google_ad_width = 728;
+        google_ad_height = 15;
+        //-->
       </script>
       <script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       </script>
 
       <script type="text/javascript"><!--
-	amazon_ad_tag = "<?php
+        amazon_ad_tag = "<?php
           global $wg_AMZWID_associateId;
           echo $wg_AMZWID_associateId;                          ?>";
-	amazon_ad_width = "728";
-	amazon_ad_height = "90";
+        amazon_ad_width = "728";
+        amazon_ad_height = "90";
         amazon_ad_border = "hide";
-	amazon_ad_logo = "hide";
-	amazon_ad_link_target = "new";
-	amazon_color_border = "f9f9f9";
-	amazon_color_link = "1d43c0";
-	amazon_color_logo = "000000";
+        amazon_ad_logo = "hide";
+        amazon_ad_link_target = "new";
+        amazon_color_border = "f9f9f9";
+        amazon_color_link = "1d43c0";
+        amazon_color_logo = "000000";
       //--></script>
       <script type="text/javascript" src="http://www.assoc-amazon.com/s/ads.js"></script>
     </div>
     <div id="bottom-ads-fullpage-content" style="display: none;">
       <script type="text/javascript"><!--
-	google_ad_client = "<?php
+        google_ad_client = "<?php
           global $wg_GOOG_publisherId;
           echo $wg_GOOG_publisherId;                            ?>";
-	google_ad_slot = "<?php
+        google_ad_slot = "<?php
           global $wg_HelpSkin_GOOG_bottomFull;
           echo $wg_HelpSkin_GOOG_bottomFull;                    ?>";
-	google_ad_width = 468;
-	google_ad_height = 60;
-	//-->
+        google_ad_width = 468;
+        google_ad_height = 60;
+        //-->
       </script>
       <script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       </script>
     </div>
 
