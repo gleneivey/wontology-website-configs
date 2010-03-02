@@ -84,13 +84,13 @@ $wgContentNamespaces =  array( 100 );
 
 $wgAllowExternalImages = true;
 
-$wgGroupPermissions['*']['edit']             = false;
+$wgGroupPermissions['*']['edit']                   = false;
 $wgGroupPermissions['*']['createpage']             = false;
 
 require_once( "$IP/extensions/PageCSS/PageCSS.php" );
+$wgUsePathInfo = true;
 require_once( "$IP/extensions/skin-by-url-2.php" );
 
-$wgUsePathInfo = true;
 $wgDefaultSkin = 'monowithads';
 $wg_AMZWID_associateId = "wontology-20";
 $wg_AMZWID_margin = "2em";
