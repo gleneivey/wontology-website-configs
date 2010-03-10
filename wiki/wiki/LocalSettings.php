@@ -78,9 +78,15 @@ $wgRightsIcon = "${wgScriptPath}/skins/common/images/gnu-fdl.png";
 
 $wgExtraNamespaces[100] = "Help";
 $wgExtraNamespaces[101] = "Help_talk";
+$wgExtraNamespaces[102] = "Wontology";
+$wgExtraNamespaces[103] = "Wontology_talk";
+$wgExtraNamespaces[104] = "Adas_Daughters";
+$wgExtraNamespaces[105] = "Adas_Daughters_talk";
 $wgNamespacesWithSubpages[100] = true;
 $wgNamespacesToBeSearchedDefault[100] = true;
-$wgContentNamespaces =  array( 100 );
+$wgNamespacesToBeSearchedDefault[102] = true;
+$wgNamespacesToBeSearchedDefault[104] = true;
+$wgContentNamespaces =  array( 100, 102, 104 );
 
 $wgAllowExternalImages = true;
 
