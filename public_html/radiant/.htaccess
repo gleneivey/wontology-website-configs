@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^radiant.wontology.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www.radiant.wontology.org$
+RewriteRule ^(.*)$ "http\:\/\/127\.0\.0\.1\:12008%{REQUEST_URI}" [P,QSA,L]
+

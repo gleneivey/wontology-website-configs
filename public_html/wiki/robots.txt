@@ -1,0 +1,8 @@
+User-agent: Mediapartners-Google
+Disallow:
+
+User-agent: *
+Disallow: /wiki
+Disallow: /Special:
+Disallow: /WikiHelp:
+
