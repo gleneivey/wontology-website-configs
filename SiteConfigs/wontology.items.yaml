@@ -1,0 +1,171 @@
+--- 
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: basedUpon
+    flags: "0"
+    title: Based Upon
+    id: "1999687579"
+    description: This relationship is used to denote that one thing was inspired by, derived from, etc. another.  For example, "BladeRunner [is] basedUpon DoAndroidsDreamOfElectronicSheep".
+    sti_type: PropertyItem
+  attributes_cache: {}
+
+- !ruby/object:IndividualItem 
+  attributes: 
+    name: Cplusplus
+    flags: "0"
+    title: C++ family of programming languages
+    id: "1999687578"
+    description: This represents all versions of the C++ programming language.
+    sti_type: IndividualItem
+  attributes_cache: {}
+
+- !ruby/object:IndividualItem 
+  attributes: 
+    name: AnsiC
+    flags: "0"
+    title: ANSI C programming language
+    id: "1999687577"
+    description: The ANSI-standard definition of the C programming language.
+    sti_type: IndividualItem
+  attributes_cache: {}
+
+- !ruby/object:IndividualItem 
+  attributes: 
+    name: KRC
+    flags: "0"
+    title: K&R C programming language
+    id: "1999687576"
+    description: The Kernighan and Ritchie version of the definition of the C programming language.
+    sti_type: IndividualItem
+  attributes_cache: {}
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: isAnInstanceOf
+    flags: "0"
+    title: Is an Instance of
+    id: "1999687575"
+    description: This relationship indicates that the subject fits within the definition established by the object.  For example, "Cat isAnInstanceOf Pet".
+    sti_type: PropertyItem
+  attributes_cache: {}
+
+- !ruby/object:IndividualItem 
+  attributes: 
+    name: C
+    flags: "0"
+    title: C family of programming languages
+    id: "1999687574"
+    description: This represents all versions of the C programming language.
+    sti_type: IndividualItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: ObjectOrientedProgrammingLanguages
+    flags: "0"
+    title: Object-Oriented programming languages
+    id: "1999687573"
+    description: This is the category of all (primarily) Object-Oriented programming languages.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: FunctionalProgrammingLanguages
+    flags: "0"
+    title: Functional programming languages
+    id: "1999687572"
+    description: This is the category of all (primarily) functional-style programming languages.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: ProceduralProgrammingLanguages
+    flags: "0"
+    title: Procedural programming languages
+    id: "1999687571"
+    description: This is the category of all (primarily) procedural-style programming languages.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: ProgrammingLanguageParadigms
+    flags: "0"
+    title: Programming language paradigms
+    id: "1999687570"
+    description: This category contains all of the different fundamental organizing concepts around which a programming language can be structured, such as Procedural, Object-Oriented, and Functional programming languages.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: classifies
+    flags: "0"
+    title: Classifies
+    id: "1999687569"
+    description: Using this relationship, "GroupOfCategories classifies BroaderCategory" states that the subject category is a way (or, is the parent of several ways) in which the members of the BroaderCategory can be divided or grouped.  For example "FuelSource classifies Automobile" indicates that groups of items in the Automobile category can be distinguished from each other based on having differed FuelSource-es.
+    sti_type: PropertyItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: ProgrammingLanguageExecutionStyles
+    flags: "0"
+    title: Ways in which a programming language can execute
+    id: "1999687568"
+    description: This category contains all of the different ways in which a programming language's source code can be executed.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: IntermediateFormProgrammingLanguages
+    flags: "0"
+    title: All compiled-to-intermediate programming languages
+    id: "1999687567"
+    description: This is the category of programming languages which are compiled to an intermediate form, rather than being compiled directly to machine code.  This includes threaded languages, languages interpreted by a virtual machine, etc.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: InterpretedProgrammingLanguages
+    flags: "0"
+    title: All purely interpreted programming languages
+    id: "1999687566"
+    description: This is the category of all programming languages where execution is accomplished by the run-time interpretation of human-readable source code.  Note that this category can be applied both to entire programming language families (languages that are always meant to be interpreted) and to individual programming language implementations (even those of languages originally designed for some other form of execution).  For example, languages in the C family are intended to be compiled languages, but there are still a few implementations that directly interpret C source, and this is an appropriate category for those specific implementations.  Alternatively, the BASIC programming language family is an InterpretedProgrammingLanguage, even though there are some individual implementations (e.g., CBASIC) that are compiled and can be placed in the CompiledProgrammingLanguage category.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: CompiledProgrammingLanguages
+    flags: "0"
+    title: All compiled programming languages
+    id: "1999687565"
+    description: This is the category of all programming languages that are compiled (rather than assembled) from a human-readable form to machine code for execution.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: AssemblyProgrammingLanguages
+    flags: "0"
+    title: All assembly programming languages
+    id: "1999687564"
+    description: This is the category of all programming languages that are assembled (rather than compiled) to machine code for execution.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: ProgrammingLanguages
+    flags: "0"
+    title: All Programming Langugages
+    id: "1999687563"
+    description: This is the general category that contains all known programming languages.
+    sti_type: CategoryItem
+  attributes_cache: {}
+
