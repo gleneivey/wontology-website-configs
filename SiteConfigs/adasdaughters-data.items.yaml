@@ -1,0 +1,65 @@
+--- 
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: ComputerScience
+    flags: "0"
+    title: Computer Science
+    description: The field of computer science.
+    sti_type: CategoryItem
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: Mathematics
+    flags: "0"
+    title: Mathematics
+    description: The field of mathematics.
+    sti_type: CategoryItem
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: Writing
+    flags: "0"
+    title: Writing
+    description: The pursuit of "writing," authoring articles, essays, papers, books, etc., in any field.
+    sti_type: CategoryItem
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: Teaching
+    flags: "0"
+    title: Teaching
+    description: The pursuit of educating students, at all levels, including college professors, tutors, etc.
+    sti_type: CategoryItem
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: Physics
+    flags: "0"
+    title: Physics
+    description: The field of physics, including experimental and theoretical.
+    sti_type: CategoryItem
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: Astronaut
+    flags: "0"
+    title: Astronaut (Cosmonaut, Taikonaut, etc.)
+    description: The profession of travelling in space, in particular a full-time part of a government space program.
+    sti_type: CategoryItem
+
+- !ruby/object:IndividualItem 
+  attributes: 
+    name: Ada_Lovelace
+    flags: "0"
+    title: Augusta Ada Byron King, Countess of Lovelace
+    description: Ada Lovelace was a nineteenth-century mathematician and author, and is credited as the first computer programmer.
+    sti_type: IndividualItem
+
+- !ruby/object:IndividualItem 
+  attributes: 
+    name: Sally_Ride
+    flags: "0"
+    title: Sally Kristen Ride
+    description: Sally Ride is a retired astronaut and a physics professor, who has worked on multiple government Commissions/Committees providing NASA oversight.  She was the first American woman in space.
+    sti_type: IndividualItem
+

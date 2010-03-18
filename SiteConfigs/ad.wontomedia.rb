@@ -2,7 +2,7 @@ require "ostruct"
 
 WontoMedia = OpenStruct.new({
   :site_title => "AdasDaughters.org",
-  :site_tagline => "Noteable women in technology and science",
+  :site_tagline => "Notable women in technology and science",
   :site_logo_title => "<div style='margin-bottom: 0.5em; margin-top: 0.25em; text-align: center;'><span style='color: black; font-family: cursive; font-style: italic; font-size: 130%;'>Ada<span style='color: #b0b0ff;'>'</span>s Daughters</span></div>",
 
   :help_url_prefix  => "http://wiki.wontology.org/wiki/help.php?title=",

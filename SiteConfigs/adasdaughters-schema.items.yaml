@@ -1,0 +1,128 @@
+--- 
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: NotableWoman
+    flags: "0"
+    title: Notable Woman in Technology or Science
+    description: This is the class containing all of the Notable Women listed in AdasDaughters.org.  To add a new woman to the system, use an "Add new NotableWoman" link or the generic "Create a new item" and select the "Notable Woman" class on the form.
+    sti_type: CategoryItem
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: FieldOfStudy
+    flags: "0"
+    title: Field or area of study, research, or expertise
+    description: This class contains all of the entries used to associate particular Notable Women with their area of work or achievement.  Items in this class represent fields of knowledge (mathematics, aeronautics, etc.), rather than the type of work someone might do in those fields (research, teach, etc. which are items in the "Type of Work" class).  A single Notable Woman can be associated with several fields of study, and you should feel free to add new ones if you can't find a field appropriate to a particular person, or the fields currently listed are too general.  It is typically better to associate a Notable Woman with a field and with a Type of Work (or more than one of either or both).  However, some pursuits don't fit well into this breakdown (for example, "astronaut"), and in those cases you should look for an item in, or add an item to, the Profession class.
+    sti_type: CategoryItem
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: TypeOfWork
+    flags: "0"
+    title: Type of work
+    description: This class contains all of the entries used to associate particular Notable Women with the type of work they are known for.  Items in this class represent a general kind of work performed (teach, write, speak, coach, research, design), rather than the field in which that work is done (mathematics, physics, computers, etc. which are items in the "Field of Study" class).  A single Notable Woman can be associated with several types of work, and you should feel free to add new ones if you can't find a type of work appropriate to a particular person, of the types currently listed are too general.  It is typically better to associate a Notable Woman with a type of work and with a Field of Study (or more than one of either or both).  However, some pursuits don't fit well into this breakdown (for example, "astronaut"), and in those cases you should look for an item in, or add an item to, the Profession class.
+    sti_type: CategoryItem
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: Profession
+    flags: "0"
+    title: Profession or occupation
+    description: This class contains all of the professions that a Notable Woman can be associated with in the AdasDaughters.org system.  Most of the time, you'll be able to quickly categorize the type of work a Woman is Notable for by selecting one or more each of Type of Work and Field of Study for her to be associated with, such as "research and teaching in mathematics" or "coaching in computer software testing and in learning game design".  However, some pursuits are singular, and don't break down this way, like "astronaut" or "inventor".  Items representing these types of vocations are contained in this class.  Feel free to add another if you need it to properly describe a Notable Woman, and you can't think of a way to descibe her with (even by adding to) the items in Field of Study and Type of Work.
+    sti_type: CategoryItem
+
+- !ruby/object:CategoryItem 
+  attributes: 
+    name: PropertiesOfNotableWomen
+    flags: "0"
+    title: Class of Properties that apply to NotableWoman items
+    description: This class contains all of the properties that apply to (that require the "subject" of "connections" using that property to be) items that belong to the NotableWoman class (instances).  This class is a Category-type item, so cannot be used as a property (as the predicate item of a connection) itself.  But is serves as the subject or object of relationships which should apply to all of its child properties.  This is basically a short-hand allowing connections that define the properties for a NoteablWoman to be made just once, with this item, rather than having to be repeated for every single one of the individual properties that belong to this class.
+    sti_type: CategoryItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: wasBornOn
+    flags: "0"
+    title: Was born on
+    description: This property is used to associate a NotableWoman with her birth date.  The "object" of connetions made using this property should be a constant value expressing her date of birth.  It should be as accurate as possible (including a time if it is known), and cannot be ambiguous.  For example, if you spell out the month when entering a birth date, then both "4 January 1955" and "Jan 4, 1955" are acceptable.  However, you should not type something like "1/4/55" because of both the month/day ambiguity (difference between U.S. and European common ordering) and because of the century ambiguity (probably 1955, but what if it was 1855?).
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: passedAwayOn
+    flags: "0"
+    title: Passed away on
+    description: This property is used to associate a NotableWoman with her date of death.  Of course, if she is still alive, this property can simply be skipped.  The "object" of connetions made using this property should be a constant value expressing her date of death.  It should be as accurate as possible (including a time if it is known), can cannot be ambiguous.  For example, if you spell out the month when entering a date, then both "4 January 1955" and "Jan 4, 1955" are acceptable.  However, you should not type something like "1/4/55" because of both the month/day ambiguity (difference between U.S. and European common ordering) and because of the century ambiguity (probably 1955, but what if it was 1855?).
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: isInTheField
+    flags: "0"
+    title: Is in the field of
+    description: This property is used to associate a NotableWoman with the technical or scientific field(s) for which she is known.  When using this property to making a connection between a NotableWoman and another "item", the item should belong to the FieldOfStudy class.
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: does
+    flags: "0"
+    title: Does
+    description: This property is used to associate a NotableWoman with the kind of work for which she is known.  For example, "she does teaching" or "she does research".  When using this property to making a connection between a NotableWoman and another "item", the item should belong to the TypeOfWork class.
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: isA
+    flags: "0"
+    title: Is a/an
+    description: This property is used to associate a NotableWoman with her profession.  It is better if a woman's pursuits can be described by using some combination of the "Is in the field of" and "Does" properties.  However, if this isn't appropriate, for example a woman's profession is one that doesn't break down into separate skills and field, like "astronaut" or "inventor", then this property can be used to associate her with the appropriate item(s) in the Profession class.
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: hasAWikipediaEntryAt
+    flags: "0"
+    title: Has a Wikipedia entry at
+    description: This property is used to enter a link to a biographical article about a Notable Woman into AdasDaughters.org.  Only one connection using this property should be created for each Notable Woman, because there will never be more than one Wikipedia article on a given person.  The entire address (URL) of the Wikipedia article should be entered as this property's object, starting from the "http:".
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: hasAnAldPostAt
+    flags: "0"
+    title: Has an Ada-Lovelace-Day post at
+    description: This property is used to enter a link to a post about a Notable Woman that was created to celebrate Ada Lovelace Day (see http://findingada.com/ ).  Feel free to add links to your own posts or other people's, from this year or prior ones.  The entire address (URL) of the Wikipedia article should be entered as this property's object, starting from the "http:".
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: isReferencedAt
+    flags: "0"
+    title: Is referenced at
+    description: This property is used to enter a link to information about or referencing a Notable Woman listed here on AdasDaughters.org.  If the web resource you're referencing is a Wikipedia article or a post that was created for Ada Lovelace Day (see http://findingada.com ), you should use one of the more specific properties, "Has a Wikipedia entry at" or "Has an Ada-Lovelace-Day post at", respectively.  The entire address (URL) of the Wikipedia article should be entered as this property's object, starting from the "http:".
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: inspiredBy
+    flags: "0"
+    title: Inspired by
+    description: Use this relationship to link two Notable Women, one of which was consciously inspired by or trying to follow the work of another.  This property is intended to be used sparingly, and only to denote significant influences.  For example, if a Notable Woman's biography contained an entire chapter about how she was inspired by another woman and all the ways in which it shaped her life, then this relationship is appropriate.  If, however, a woman mentions another in response to a leading interview question, and is unlikely to remember her answer or repeat it later, then the "inspriation" is too weak to bother documenting here.
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: taught
+    flags: "0"
+    title: Taught
+    description: This property is used to indicate that one Notable Woman was an actual teacher of (direct and sustained student/teach relationship, not just "wrote/said things later affecting") another Notable Woman.  It is the opposite of the "Studied With" property, and only one connection using one of these two properties needs to be created in the system for both to be displayed as true.
+    sti_type: PropertyItem
+
+- !ruby/object:PropertyItem 
+  attributes: 
+    name: studiedWith
+    flags: "0"
+    title: Studied with
+    description: This property is used to indicate that one Notable Woman was an actual student (direct and sustained student/teach relationship, not just "read about") of another Notable Woman.  It is the opposite of the "Taught" property, and only one connection using one of these two properties needs to be created in the system for both to be displayed as true.
+    sti_type: PropertyItem
