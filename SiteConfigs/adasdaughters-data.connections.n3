@@ -1,22 +1,22 @@
-<#Ada_Lovelace> <#isReferencedAt> "http://findingada.com/" .
-<#Ada_Lovelace> <#hasAWikipediaEntryAt> "http://en.wikipedia.org/wiki/Ada_lovelace" .
-<#Ada_Lovelace> <#isInTheField> <#ComputerScience> .
-<#Ada_Lovelace> <#isInTheField> <#Mathematics> .
-<#Ada_Lovelace> <#does> <#Writing> .
-<#Ada_Lovelace> <#passedAwayOn> "27 November 1852" .
-<#Ada_Lovelace> <#wasBornOn> "10 December 1815" .
-<#Ada_Lovelace> <#hasAnAldPostAt> "http://lisaorange.blogspot.com/2009/03/geek-girl-circa-1830.html" .
-<#Ada_Lovelace> <#hasAnAldPostAt> "http://sujatha-techie.blogspot.com/2009/03/enchantress-of-numbers.html" .
-<#Ada_Lovelace> <#is_instance_of> <#NotableWoman> .
+<#AdaLovelace> <#isReferencedAt> "http://findingada.com/" .
+<#AdaLovelace> <#hasAWikipediaEntryAt> "http://en.wikipedia.org/wiki/Ada_lovelace" .
+<#AdaLovelace> <#isInTheField> <#ComputerScience> .
+<#AdaLovelace> <#isInTheField> <#Mathematics> .
+<#AdaLovelace> <#does> <#Writing> .
+<#AdaLovelace> <#passedAwayOn> "27 November 1852" .
+<#AdaLovelace> <#wasBornOn> "10 December 1815" .
+<#AdaLovelace> <#hasAnAldPostAt> "http://lisaorange.blogspot.com/2009/03/geek-girl-circa-1830.html" .
+<#AdaLovelace> <#hasAnAldPostAt> "http://sujatha-techie.blogspot.com/2009/03/enchantress-of-numbers.html" .
+<#AdaLovelace> <#is_instance_of> <#NotableWoman> .
 
-<#Sally_Ride> <#wasBornOn> "May 26, 1951" .
-<#Sally_Ride> <#isA> <#Astronaut> .
-<#Sally_Ride> <#hasAnAldPostAt> "http://synchchaos.com/?p=363" .
-<#Sally_Ride> <#isReferencedAt> "http://www.youtube.com/watch?v=lB7DtakckAE" .
-<#Sally_Ride> <#hasAWikipediaEntryAt> "http://en.wikipedia.org/wiki/Sally_Ride" .
-<#Sally_Ride> <#isInTheField> <#Physics> .
-<#Sally_Ride> <#does> <#Teaching> .
-<#Sally_Ride> <#is_instance_of> <#NotableWoman> .
+<#SallyRide> <#wasBornOn> "May 26, 1951" .
+<#SallyRide> <#isA> <#Astronaut> .
+<#SallyRide> <#hasAnAldPostAt> "http://synchchaos.com/?p=363" .
+<#SallyRide> <#isReferencedAt> "http://www.youtube.com/watch?v=lB7DtakckAE" .
+<#SallyRide> <#hasAWikipediaEntryAt> "http://en.wikipedia.org/wiki/Sally_Ride" .
+<#SallyRide> <#isInTheField> <#Physics> .
+<#SallyRide> <#does> <#Teaching> .
+<#SallyRide> <#is_instance_of> <#NotableWoman> .
 
 <#ComputerScience> <#is_instance_of> <#FieldOfStudy> .
 <#Mathematics> <#is_instance_of> <#FieldOfStudy> .

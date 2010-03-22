@@ -49,7 +49,7 @@
 
 - !ruby/object:IndividualItem 
   attributes: 
-    name: Ada_Lovelace
+    name: AdaLovelace
     flags: "0"
     title: Augusta Ada Byron King, Countess of Lovelace
     description: Ada Lovelace was a nineteenth-century mathematician and author, and is credited as the first computer programmer.
@@ -57,7 +57,7 @@
 
 - !ruby/object:IndividualItem 
   attributes: 
-    name: Sally_Ride
+    name: SallyRide
     flags: "0"
     title: Sally Kristen Ride
     description: Sally Ride is a retired astronaut and a physics professor, who has worked on multiple government Commissions/Committees providing NASA oversight.  She was the first American woman in space.

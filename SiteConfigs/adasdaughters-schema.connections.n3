@@ -13,6 +13,7 @@
 <#inspiredBy> <#is_instance_of> <#PropertiesOfNotableWomen> .
 <#taught> <#is_instance_of> <#PropertiesOfNotableWomen> .
 <#studiedWith> <#is_instance_of> <#PropertiesOfNotableWomen> .
+
 <#taught> <#inverse_relationship> <#studiedWith> .
 <#studiedWith> <#inverse_relationship> <#taught> .
 
@@ -31,5 +32,14 @@
 <#hasAnAldPostAt> <#has_scalar_object> <#URL_Value> .
 <#isReferencedAt> <#has_scalar_object> <#URL_Value> .
 <#inspiredBy> <#property_object_is> <#NotableWoman> .
+<#inspiredBy> <#has_item_object> "True" .
 <#taught> <#property_object_is> <#NotableWoman> .
+<#taught> <#has_item_object> "True" .
 <#studiedWith> <#property_object_is> <#NotableWoman> .
+<#studiedWith> <#has_item_object> "True" .
+
+<#NotableWoman> <#class_item_type_is> <#Value_ItemType_Individual> .
+<#FieldOfStudy> <#class_item_type_is> <#Value_ItemType_Category> .
+<#TypeOfWork> <#class_item_type_is> <#Value_ItemType_Category> .
+<#Profession> <#class_item_type_is> <#Value_ItemType_Category> .
+<#PropertiesOfNotableWomen> <#class_item_type_is> <#Value_ItemType_Property> .
