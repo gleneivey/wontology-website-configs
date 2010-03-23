@@ -1,0 +1,15 @@
+<!-- Copyright (c)  2010  Glen E. Ivey
+     Permission is granted to copy, distribute and/or modify this document
+     under the terms of the GNU Free Documentation License, Version 1.3;
+     with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+     A copy of the license is in the file COPYING.DOCUMENTATION
+  -->
+For press and media, see our [[Adas_Daughters:Press Info|press page]], which includes additional contacts.
+
+* For problems with the web site, please mailto:brother@adasdaughters.org
+* For other questions about the use of the web site, the kind of data it does or should contain, etc., you can use:
+** twitter: [http://twitter.com/wontology @adasdaughters],
+** our [http://rubyforge.org/forum/?group_id=7903 discussion forum], or
+** our [http://rubyforge.org/mail/?group_id=7903 email list] (which you can post to be emailing <tt>wontomedia-development at rubyforge dot org</tt>)
+
+There is additional contact information on the [[Wontology:Contact_Us|contacts page]] for [http://wontology.org/ wontology.org], which uses the same web application software as this site.

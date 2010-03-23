@@ -8,7 +8,7 @@ WontoMedia = OpenStruct.new({
   :help_url_prefix  => "http://wiki.wontology.org/wiki/help.php?title=",
   :popup_url_prefix => "http://wiki.wontology.org/wiki/popup.php?title=",
   :site_content_url_prefix =>
-    "http://wiki.wontology.org/wiki/help.php?title=Wontology:",
+    "http://wiki.wontology.org/wiki/help.php?title=Adas_Daughters:",
   :site_content_url_postfix => '',
 
   :ads => OpenStruct.new({

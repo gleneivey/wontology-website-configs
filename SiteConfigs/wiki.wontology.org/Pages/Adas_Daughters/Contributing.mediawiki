@@ -1,0 +1,33 @@
+<!-- Copyright (c)  2010  Glen E. Ivey
+     Permission is granted to copy, distribute and/or modify this document
+     under the terms of the GNU Free Documentation License, Version 1.3;
+     with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+     A copy of the license is in the file COPYING.DOCUMENTATION
+  -->
+<!-- This page is served for the "Add Content" link on the home page
+     of http://adasdaughters.org/.
+  -->
+All of the content on this site was added and is maintained by visitors just like you, our contributors.  Hopefully, you'll find both browsing information and adding to it to be easy.
+
+Most people most of the time will be interested in adding a new Notable Woman to the index.  There are a couple of "add new notable woman" links on the site's home page, plus another on the summary page for the Notable Woman category itself.
+
+When you add a new "[[Help:GlossaryAtoO#anchor_Item|item]]" (an individual woman or anything else listed in the site), you are asked for three basic pieces of information:
+
+* '''[[Help:GlossaryPtoZ#anchor_Title|Title]]''': This is the long version of the "item's" name.  For a notable-woman item, this should be her full, formal name.
+* '''[[Help:GlossaryAtoO#anchor_Name|Name]]''': A short version of her name, typically just first and last (although Name has to be unique for every woman listed, so if two women with the "same" name are listed, they'll have to be assigned variations so that the Name value assigned to both aren't identical).  "Name" cannot contain spaces or punctuation, so typically the first and last name are "run together" with the last name capitalized to make the boundary clear.  The system will automatically generate a suggested Name, leaving out any illegal characters and changing capitalization to match word boundaries, as you type the Title.  Often, you'll either use this as is or only have to delete superfluous parts (middle name, honorific, etc.) to get a Name you can use.
+* '''[[Help:GlossaryAtoO#anchor_Description|Description]]''': Biographical and other information about the woman referred to in the entry.  Enter as much as you want.  (Right now, when it is displayed in a web page, all your text will be run together.  However, please enter paragraph boundaries with a blank line now, as that and other formatting will be provided soon.)
+
+There is no "preview" function.  Just go ahead and submit your change or addition, and then edit it again if it didn't come out the way you wanted.  And feel free to add to and improve other people's entries, either the basic text fields (above) or any of the specific values assigned to the new item:
+
+After creating a new entry for a "notable woman" (or any other item in the index), you will be shown the information page for that entry.  For NotableWoman and a few other kinds of items, there are a number of data elements that the system knows are commonly associated, and place holders are shown for each of these which you can click to "Add".
+
+AdasDaughters.org is actually built on a more general "[[Help:GlossaryPtoZ#anchor_Wontology|wontology]]" system: a collaborative, community tool for creating and maintaining a collection of interconnected data items.  If you're interested in the details of the underlying system, you could start with:
+
+* [[Help:Information as Relationships|Information as Relationships]]
+* [[Help:Wontology Concepts|Wontology Concepts]]
+* [[Help:Naming Conventions|Naming Conventions]]
+* [[Help:Browsing a Wontology|Browsing a Wontology]]
+
+[[Help:Main Page|All of the online help pages]] linked to from within the site are located together in the wiki.  Also, there is a ''glossary'', broken into pages for words from '''[[Help:GlossaryAtoO|A to O]]''' and '''[[Help:GlossaryPtoZ| P to Z]]'''.  And we also have a set of [[Help:Tutorials]] with step-by-step instructions for some of the most common types of editing operations.
+
+You might also be interested in another site, http://wontology.org/ and [[Help:About Wontology.org|About wontology.org]], or the [[Help:GlossaryPtoZ#anchor_WontoMedia|WontoMedia]] software that both sites run.
