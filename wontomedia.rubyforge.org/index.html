@@ -11,30 +11,46 @@
     <blockquote><p>
 
 <b><i>WontoMedia</i></b> &mdash; WontoMedia is a web application
-package for hosting a Wontology (a
+package for hosting a wontology (a
 
 <a href="http://en.wikipedia.org/wiki/Wiki">Wiki</a>-<a href="http://en.wikipedia.org/wiki/Ontology_(information_science)">Ontology</a>):
 
-a classification
-scheme created and maintained by a community. From categories in a
-bug-tracker or RubyForge's own Trove, to a document repository's
-controlled vocabulary, a species taxonomy, or thesaurus.
+a classification scheme created and maintained by a community.
 ("<em>wontology</em>" comes from <u>w</u>iki plus
 <u>ontology</u>. "<em>WontoMedia</em>" is a <u>wonto</u>logy web app
 in the same way that <u>Media</u>Wiki is a wiki web app.)
 
+    </p><p>
+
+WontoMedia is intended for websites that are, or that use,
+wontologies.  That is, websites which are (in whole or in part)
+community-produced ontologies, or simpler structures like lists,
+hierarchies, taxonomies, thesauri, controlled vocabularies, etc.  This
+is analogous to how a wiki is used for community production of prose
+or to how freebase.com is a "community database" site.
+
     </p><ul>
       <li>
 
-A live example of a WontoMedia deployment is at
-<a href="http://wontology.org/">http://wontology.org</a>.
+WontoMedia is deployed at:
+        <ul><li>
+<a href="http://adasdaughters.org/">AdasDaughters.org</a>, an index of
+notable women in technology and science, inspired by
+<a href="http://findingada.com/">Ada Lovelace Day</a>.
+        </li><li>
+<a href="http://wontology.org/">http://wontology.org</a>, our
+beta-test site with the beginnings of a classification scheme for
+pogramming languages.
+        </li></ul>
 
       </li><li>
 
 The project wiki is at
 <a href="http://wiki.wontology.org/Main_Page">http://wiki.wontology.org</a>,
-including <a href="http://wiki.wontology.org/Install_from_Scratch">install</a>
-<a href="http://wiki.wontology.org/Setting_Up_Your_Development_Environment">instructions</a>.
+including install instructions
+<a href="http://wiki.wontology.org/Install_from_Scratch"> for running</a> and 
+<a href="http://wiki.wontology.org/Setting_Up_Your_Development_Environment">for
+development</a>.
 
       </li><li>
 
@@ -65,15 +81,6 @@ and supporting distribution/installation via
 <a href="http://www.kernel.org/pub/software/scm/git/docs/">Git</a>,
 <a href="http://www.rubygems.org/">rubygems</a>, and
 <a href="http://pkg-ruby-extras.alioth.debian.org/upstream-devs.html">tar/setup.rb</a> (planned).
-
-    </p><p>
-
-It is intended for websites that are, or that use, wontologies.  That
-is, websites which are (in whole or in part) community-produced
-ontologies, or simpler structures like lists, hierarchies, taxonomies,
-thesauri, controlled vocabularies, etc.  This is analogous to how a
-wiki is used for community production of prose or to how freebase.com
-is a "community database" site.
 
     </p></blockquote>
     <h3>Welcome Developers</h3>
@@ -126,25 +133,32 @@ The project's developer resources are distributed as follows:
     </p>
     <ul><li>
 
-Primary (stable release) Git repository on
+For deployment, WontoMedia can be installed via RubyGems (<i>e.g.</i>,
+"<code>gem install wontomedia</code>"), with the latest release gem
+located on <a href="http://rubygems.org/gems/wontomedia">rubygems.org</a>.
+
+    </li><li>
+
+The primary (stable release) source repository is in Git on
 <a href="http://rubyforge.org/projects/wontomedia/">RubyForge</a>:
 <code>git://rubyforge.org/wontomedia.git</code> (or
 <a href="http://wontomedia.rubyforge.org/git?p=wontomedia.git;a=tree">view
 in a browser</a>).  The current release version of WontoMedia is in
-the branch "<tt>master</tt>", with the sources for user stories
-that have been completed since the last release in the branch
-"<tt>development</tt>".
+the branch "<tt>master</tt>", with the sources for user stories that
+have been completed since the last release in the branch "<tt>rc</tt>"
+(release candidate).
 
     </li><li>
 
-Working Git repository on
-<a href="https://github.com/gleneivey/wontomedia/tree">GitHub</a>:
-<code>git://github.com/gleneivey/wontomedia.git</code>, where
-the branch "<tt>master</tt>" is used for integration and testing of
+The working Git repository is on <a
+href="https://github.com/gleneivey/wontomedia/tree">GitHub</a>:
+<code>git://github.com/gleneivey/wontomedia.git</code>, where the
+branch "<tt>master</tt>" is used for integration and testing of
 completed stories before they are deployed to our public testing site
-or merged into the <tt>development</tt> branch in the RubyForge
-repository.  Each user story currently being implemented is stored in
-its own GitHub branch.
+or merged into the <tt>rc</tt> branch in the RubyForge repository.
+Each user story currently being implemented is stored in its own
+GitHub branch, with intra-story continuous integration into the branch
+<tt>early-integration</tt>.
 
     </li><li>
 
