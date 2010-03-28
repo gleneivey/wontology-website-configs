@@ -1,6 +1,0 @@
-production:
-  adapter: mysql
-  database: glenivey_AdProd
-  username: glenivey_ada
-  password: D#f5(,=1)*Wf
-  host: localhost 
