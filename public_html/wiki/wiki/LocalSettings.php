@@ -63,7 +63,7 @@ $wgUseTeX           = false;
 $wgLocalInterwiki   = strtolower( $wgSitename );
 $wgLanguageCode = "en";
 $wgDiff3 = "";
-$wgDefaultSkin = 'monobook';
+$wgDefaultSkin = 'monowithads';
 
 $wgSecretKey = SECRET
 
@@ -99,7 +99,6 @@ require_once( "$IP/extensions/skin-by-url-2.php" );
 require_once( "$IP/extensions/googleAnalytics/googleAnalytics.php" );
 $wgGoogleAnalyticsAccount = "UA-13113606-3";
 
-$wgDefaultSkin = 'monowithads';
 $wg_AMZWID_associateId = "wontology-wiki-20";
 $wg_AMZWID_margin = "2em";
 require_once( "$IP/extensions/AmazonWidget/AmazonWidget.php" );

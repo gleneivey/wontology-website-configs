@@ -8,12 +8,4 @@
 if ( ! defined( 'MEDIAWIKI' ) )
 	die( 1 );
 
-if( $_ENV['MW_INSTALL_PATH'] ) {
-  $IP = $_ENV['MW_INSTALL_PATH'];
-} else {
-  $IP = dirname( dirname( __FILE__ ) );
-}
-
-require_once( "$IP/includes/SkinTemplate.php" );
-
-
+require_once( dirname( __FILE__ ) . '/MonoBook.php');
