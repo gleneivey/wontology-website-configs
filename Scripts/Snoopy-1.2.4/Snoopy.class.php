@@ -885,6 +885,20 @@ class Snoopy
                 }				
 				$this->response_code = $currentHeader;
 			}
+
+			if (preg_match("|^Set-Cookie:\s+(.*)$|", $currentHeader, $matches)) {
+                $cookieSet = $matches[1];
+                foreach( preg_split("/;\s*/", $cookieSet) as $aCookie) {
+				    $keyAndValue = preg_split("/=/", $aCookie, 2);
+
+                    if (isset( $keyAndValue[1] )) {
+                        $this->cookies[$keyAndValue[0]] = $keyAndValue[1];
+                    }
+                    else {
+                        $this->cookies[$keyAndValue[0]] = "";
+                    }
+                }
+            }
 				
 			$this->headers[] = $currentHeader;
 		}

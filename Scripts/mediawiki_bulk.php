@@ -14,7 +14,7 @@
 #  http://sourceforge.net/projects/snoopy/
 #
 #
-#  Syntax: php bulkmedia.php names_and_filepaths.txt [path_to_file_root]
+#  Syntax: php bulkmedia.php target_wiki_domain names_and_filepaths.txt [path_to_file_root]
 #
 # names_and_filepaths.txt has lines, each with a desired filename en wiki,
 # then a space character, then a path to the desired file to upload.  no
@@ -23,39 +23,63 @@
 
 include "./Snoopy-1.2/Snoopy.class.php";
 $snoopy = new Snoopy;
-##### this is just for me, because I have stupid HughesNet satellite internet
-##### which requires a stupid proxy to circumvent some stupid thing that they
-##### do with "normal" connections that invalidates MediaWiki's page-to-page
-##### session tracking and makes you appear logged out with each new request
-$snoopy->proxy_host = "69.19.14.10";
-$snoopy->proxy_port = "3128";
+$wikiroot = "http://" . $argv[1] . "/wiki";
+$http_responses = fopen('mediawiki_bulk.http_responses', 'w');
 
-$wikiroot = "http://a.wiki.com/wiki";
-$login_url = $wikiroot .
-  "/index.php?title=Special:Userlogin&action=submitlogin";
 
-function login($snoopy, $url){
-  $login_vars['wpName'] = "Bulk_Upload";
+
+function login($snoopy, $wikiroot, $log){
+  $login_url = $wikiroot .
+    "/index.php?title=Special:UserLogin&action=submitlogin&type=login";
+
+  $snoopy->submit($wikiroot . "/index.php?title=Special:UserLogin&returnto=Main_Page");
+  $loginpage = $snoopy->results;
+
+  fwrite($log, "****************\n");
+  fwrite($log, "Go to login page\n");
+  fwrite($log, "****************\n");
+  fwrite($log, $loginpage);
+  fwrite($log, "\n");
+
+  if ( preg_match( '/name="wpLoginToken".*?value="(.*?)"/',
+		   $loginpage, $matches ) ){
+    $token = $matches[1];
+  }
+  else {
+    echo "Failed to get login token!\n";
+    echo "**************************************************\n";
+    echo $loginpage;
+    exit;
+  }
+
+  $login_vars['wpLoginAttempt'] = "Log in";
+  $login_vars['wpName'] = "Bulk Upload";
   $login_vars['wpPassword'] = "botpass";
   $login_vars['wpRemember'] = "1";
-  $snoopy->submit($url,$login_vars);
+  $login_vars['wpLoginToken'] = $token;
+  $snoopy->submit($login_url, $login_vars);
+
+  fwrite($log, "****************\n");
+  fwrite($log, "Log in to " . $login_url . "\n");
+  fwrite($log, "****************\n");
+  fwrite($log, $snoopy->results);
+  fwrite($log, "\n");
 }
 
+
+
 echo "Logging in... ";
-login($snoopy, $login_url);
+login($snoopy, $wikiroot, $http_responses);
 echo "Done\n";
 
 
 # Open Source File and Read into $contents
-$fp = fopen($argv[1], "r");
-$contents = fread($fp, filesize($argv[1]));
+$fp = fopen($argv[2], "r");
+$contents = fread($fp, filesize($argv[2]));
 fclose($fp);
 
 # Split $contents in $pages array
 $pages = split("\n", $contents);
-
-$http_responses = fopen('mediawiki_bulk.http_responses', 'w');
-
 
 
 
@@ -70,9 +94,9 @@ function upload_file($snoopy, $wikiroot, $base_path, $log,
   $snoopy->submit($wikiroot . "/index.php?title=Special:Upload", $formvars,
 		  $formfiles);
 
-  fwrite($log, "**************** ");
+  fwrite($log, "****************\n");
   fwrite($log, "Special:Upload " . $page_title);
-  fwrite($log, " ****************\n");
+  fwrite($log, "****************\n");
   fwrite($log, $snoopy->results);
   fwrite($log, "\n");
 
@@ -87,9 +111,9 @@ function upload_file($snoopy, $wikiroot, $base_path, $log,
     $keep_going = false;
   }
 
-  if (preg_match( "/You must be /", $snoopy->results ) &&
-      preg_match( "/logged in/",    $snoopy->results )    ){
-    login($snoopy, $login_url);
+  if (preg_match( "/The action you have requested is limited to users in the groups/", $snoopy->results ) &&
+      preg_match( "/log in or create/", $snoopy->results )    ){
+    login($snoopy, $wikiroot, $log);
     echo "L";
   }
 
@@ -105,9 +129,9 @@ function edit_file($snoopy, $wikiroot, $base_path, $log,
                     "&action=edit");
     $editpage = $snoopy->results;
 
-    fwrite($log, "**************** ");
+    fwrite($log, "****************\n");
     fwrite($log, $page_title . "&action=edit");
-    fwrite($log, " ****************\n");
+    fwrite($log, "****************\n");
     fwrite($log, $editpage);
     fwrite($log, "\n");
 
@@ -117,7 +141,7 @@ function edit_file($snoopy, $wikiroot, $base_path, $log,
       $keep_going = false;
     }
     elseif ( preg_match( "/View source /", $snoopy->results ) ){
-      login($snoopy, $login_url);
+      login($snoopy, $wikiroot, $log);
       echo "L";
     }
     else
@@ -142,13 +166,17 @@ function edit_file($snoopy, $wikiroot, $base_path, $log,
   $snoopy->submit($wikiroot . "/index.php?title=" . $page_title .
                   "&action=submit", $submit_vars);
 
-  fwrite($log, "**************** ");
+  fwrite($log, "****************\n");
   fwrite($log, $page_title . "&action=submit");
-  fwrite($log, " ****************\n");
+  fwrite($log, "****************\n");
+  foreach( $snoopy->headers as $header ) {
+    fwrite($log, $header);
+  }
+  fwrite($log, "****************\n");
   fwrite($log, $snoopy->results);
   fwrite($log, "\n");
 
-  if (preg_match( "/^\w*$/", $snoopy->results ))
+  if ($snoopy->status != 302 && preg_match( "/^\w*$/", $snoopy->results ))
     return true;
 
   echo "!\n";
@@ -157,7 +185,7 @@ function edit_file($snoopy, $wikiroot, $base_path, $log,
 
 
 
-$base_path = $argv[2];
+$base_path = $argv[3];
 foreach ($pages as $key => $value) {
 
   list($page_title, $file_path)=split(" ", $value);
