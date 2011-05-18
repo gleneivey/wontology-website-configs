@@ -1,4 +1,3 @@
-
 logger = Logger.new(RAILS_ROOT + '/log/start_other_rails_apps.log')
 logger.info("\nRuning start_other_rails_apps at " + Time.now.to_s)
 
@@ -26,16 +25,14 @@ RAILS_APP_INSTANCES_TO_CHECK.each do |app_info|
   found_process = false
   processes.each do |process_line|
     if process_line =~ /#{COMMAND_PREFIX}#{app_name}/
-        found_process = true
-        logger.info("running: " + app_name)
-        break
+      found_process = true
+      logger.info("running: " + app_name)
+      break
     end
   end
 
   unless found_process
     logger.info("start: " + app_name)
-logger.info `/bin/bash -l -c 'printenv'`
-logger.info "/bin/bash -l -c '#{app_start_command}'"
     system "/bin/bash -l -c '#{app_start_command}'"
   end
 end
